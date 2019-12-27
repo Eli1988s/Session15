@@ -1,97 +1,125 @@
-@font-face{
+*{    
+    margin: 0;
+    padding: 0;
+    border: 0;
     font-family: Verdana;
-}
-body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;  
-       
-}
-#Grad{
-    background-color: rgb(178, 218, 236) ;
-    background-image: linear-gradient(rgb(241, 241, 247), rgb(178, 218, 236));
-    background-position: center; 
-    background-size: cover;
-    background-repeat: no-repeat;   
-}
-.container{
-    width: 960px;
-    margin: 0 auto;
-}
-
-header h1{
-    font-size: 40px;
-    font-weight: normaL;
-}
-header h3{
-    color: rgb(148, 142, 142);
-
-}
-
-header ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-
-header li{
-    display: inline;
-    padding: 10px;
-    list-style-type: none;
+    box-sizing: border-box;
     
 }
-header a {
-        color: rgba(19, 33, 233, 0.877);
-        font-size: 25px;
-        font-weight: bold;
-        padding: 4px;
-        text-align: center;
-}
-.header a:hover{
-    color: #ccc;
-}
-.Tool{
-    width: 40%;
-    border: 2px solid #ccc;
-    padding: 10px;
-    margin-top: 15px;
-    background-color: #fff;
-}
-.Tool img{
-    float: right;
-    width: 30%;
-    height: 30%;
-    margin-top: -380px;
-}
-.Tool :nth-child(2){
-    width: 60%;
-}
-main .DailyAbout{
-    width: 15%;
-    border: 2px solid #ccc;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #fff;
 
+body{
+    height: 100vh;
+    background-image: linear-gradient(rgb(241, 241, 247), rgb(178, 218, 236));
+    background-color: rgb(178, 218, 236) ;
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat; 
+       
 }
-main .DailyAbout :nth-child(2){
-    border-bottom: 2px dashed #ccc ;
-    padding-bottom: 20px;
+
+#Grad{
+    width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(7,.5 fr);
+    grid-template-rows: repeat(9,.5 fr);
+    grid-gap: 3px;
+    grid-gap: 20px;
 }
-.Muse{
-    width: 40%;
-    border: 2px solid #ccc;
-    padding: 10px;
-    /* margin-top: 15px; */
+#Grad div:nth-child(1){
+    grid-column: 1 / 4;
+}
+#Grad div:nth-child(2){
+    grid-column:  4 / 8;
+}
+#Grad div:nth-child(3){
+    grid-column: 1 / 6;
+    grid-row: 2 / 5;
+    border: 1px solid rgb(155, 147, 147);
     background-color: #fff;
 }
-.Muse img{
+#Grad div:nth-child(4){
+    grid-column: 6 / 8;
+    grid-row: 2 / 6;
+}
+#Grad div:nth-child(5){
+    grid-column: 1 / 6;
+    grid-row: 5 / 7;
+    border: 1px solid rgb(155, 147, 147);
+    background-color: #fff;
+}
+#Grad div:nth-child(6){
+    grid-column: 1 / 6;
+    grid-row: 7 / 10;
+    border: 1px solid rgb(155, 147, 147);
+    background-color: #fff;
+}
+.header h3{
+    color: rgb(148, 142, 142);
+}
+
+p{
+    padding: 5px;
+    font-size: 15px;
+    margin-left: 5px;
+    line-height: 1.5em;
+}
+
+a{
+    font-size: 13px;
+    padding: 5px;
+    margin-left: 5px;
+}
+nav{
+    margin-left: 70px;
+}
+nav a{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.main-nav li{
+    float: left;
+    padding: 3px;
+    list-style-type: none;
+}
+.main-nav li span{
+    color: rgb(21, 14, 124);
+}
+
+.box{
+    width: 200px;
     float: right;
-    width: 30%;
-    height: 30%;
-    margin-top: -380px;
+    margin: 10px;
 }
-.Muse :nth-child(2){
-    width: 60%;
+
+h3{
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 5px;
+    color: black;
 }
+aside{
+    margin: 0 25px 0 10px ;
+    border: 1px solid rgb(155, 147, 147);
+    background-color: #fff;
+    text-align: left;
+    justify-content: left;
+    padding: 5px;
+}
+.DailyAbout2{
+    margin:10px;
+    border-top: 3px dashed rgb(155, 147, 147);
+}
+
+.Muse{
+    padding: 20px;
+}
+
+.Tool{
+    padding: 20px;
+}
+.Antimatter{
+    padding: 20px;
+}
+
